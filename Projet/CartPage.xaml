@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projet.CartPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <ListView x:Name="CartListView" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+                    
+                                <Image Source="{Binding Photo}" WidthRequest="60" HeightRequest="60" Aspect="AspectFill" />
+
+                                <StackLayout HorizontalOptions="StartAndExpand">
+                                  
+                                    <Label Text="{Binding Designation}" FontSize="18" FontAttributes="Bold" TextColor="#333" />
+                             
+                                    <Label Text="{Binding Price, StringFormat='{0} TND'}" FontSize="14" TextColor="#666" />
+
+                                    <Label Text="{Binding Quantity}" FontSize="14" TextColor="#666" />
+
+                                  
+                                </StackLayout>
+                                <Button Text="Delete"
+                                        BackgroundColor="Red"
+                                        TextColor="White"
+                                        Clicked="OnDeleteClicked"
+                                        CommandParameter="{Binding .}" 
+                                         HorizontalOptions="End"
+                                        WidthRequest="80"
+                                        HeightRequest="40" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label x:Name="UsernameLabel" 
+           Text=""
+           FontSize="16"
+           FontAttributes="Italic"
+           TextColor="#333"
+           HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="TotalPriceLabel"
+           Text="Total: 0 TND"
+           FontSize="18"
+           FontAttributes="Bold"
+           HorizontalOptions="CenterAndExpand"
+           Margin="0,0,0,10" />
+            <Button Text="Clear Cart"
+                        BackgroundColor="Red"
+                        TextColor="White"
+                        Clicked="OnClearCartClicked" 
+                    Margin="10"/>
+
+           
+            <Button Text="Validate"
+                BackgroundColor="#4CBB17"
+                TextColor="White"
+                Margin="10"
+               Clicked="OnValidateClicked"  />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projet.users.ListUsersPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10" Spacing="20">
+            <Label Text="Users" FontSize="24" HorizontalOptions="Center" />
+
+            <ListView x:Name="usersListView" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="1" Spacing="10">
+                                <Label Text="{Binding Nom}" VerticalOptions="Center" />
+                                <Label Text="{Binding Prenom}" VerticalOptions="Center" />
+
+                                <Button Text="Delete" Clicked="OnDeleteButtonClicked"
+                                        VerticalOptions="Center" CommandParameter="{Binding Id}"
+                                        BackgroundColor="red" WidthRequest="80" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

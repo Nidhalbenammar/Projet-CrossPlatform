@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "eBMb4MXQbvQ/EJeIKImrxSdZJ6wpjJyAI9PIKGZ1rZw1+LMmvKjFluV7JaGZP5Qmx2zkptr6ZaPUHri/3HJjCQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HP\\Documents\\Desktop\\Cross-Platform\\Projet\\Projet.iOS\\Projet.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\rg.plugins.popup\\2.1.0\\rg.plugins.popup.2.1.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}

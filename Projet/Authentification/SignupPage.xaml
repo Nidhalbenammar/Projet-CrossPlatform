@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projet.SignupPage">
+    <StackLayout Padding="20" VerticalOptions="Center">
+        <Image Source="https://cdn-icons-png.flaticon.com/512/2039/2039060.png"
+                   HeightRequest="120"
+                   WidthRequest="120"
+                   HorizontalOptions="Center" />
+
+        <Label Text="Please Sign up !"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   TextColor="#333" />
+        <Entry x:Name="NomEntry" Placeholder="Nom" />
+        <Entry x:Name="PrenomEntry" Placeholder="Prénom" />
+        <Entry x:Name="UsernameEntry" Placeholder="Username" />
+        <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
+        <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" IsPassword="True" />
+        <Button Text="Signup" Clicked="OnSignupClicked"  BackgroundColor="#007BFF" TextColor="White"
+                    CornerRadius="10"/>
+    </StackLayout>
+</ContentPage>

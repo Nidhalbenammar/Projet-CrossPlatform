@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projet.users.UserProfile">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Image Source="https://cdn-icons-png.flaticon.com/512/9203/9203764.png"
+                   HeightRequest="120"
+                   WidthRequest="120"
+                   HorizontalOptions="Center" />
+            <Label Text="First Name:" />
+            <Entry x:Name="FirstNameEntry" IsEnabled="False" />
+
+            <Label Text="Last Name:" />
+            <Entry x:Name="LastNameEntry" IsEnabled="False" />
+
+            <Label Text="Username:" />
+            <Entry x:Name="UsernameEntry" IsEnabled="False" />
+
+            <Label Text="Password:" />
+            <Entry x:Name="PasswordEntry" IsEnabled="False" IsPassword="True" />
+            
+            <Label Text="Confirm Password:" />
+            <Entry x:Name="ConfirmPasswordEntry" IsEnabled="False" IsPassword="True" />
+
+            <Button Text="Edit Profile" x:Name="SaveChangesButton" Clicked="OnSaveChangesButtonClicked" />
+            <Label Text="Purchases History" FontSize="Large" FontAttributes="Bold" Padding="10,20,10,10" />
+            <ListView x:Name="CommandesListView" IsVisible="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="1" >
+
+                                <Label Text="{Binding Designation}" />
+                                <Label Text="{Binding Quantity}" />
+                                <Label Text="{Binding Price}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

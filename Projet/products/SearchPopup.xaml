@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rg:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:rg="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+              x:Class="Projet.products.SearchPopup">
+    <StackLayout Padding="20" Spacing="10" BackgroundColor="White"  WidthRequest="100"  
+        HeightRequest="100">
+      
+        <Entry x:Name="SearchEntry" Placeholder="Enter product designation" />
+
+        
+        <Button Text="Search" Clicked="OnSearchButtonClicked" BackgroundColor="#007BFF" TextColor="White" />
+    </StackLayout>
+</rg:PopupPage>

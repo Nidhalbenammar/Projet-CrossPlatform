@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Projet.HomeAdminPage">
+
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu" BackgroundColor="#333">
+            <StackLayout Padding="20">
+                <Label Text="Welcome Admin"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       Padding="0,20" />
+
+               
+                <Button Text="Add Product"
+                        TextColor="White"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="OnAddProductClicked"
+                         />
+
+               
+                <Button Text="Manage Products"
+                        TextColor="White"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="FillAndExpand"
+                         Clicked="OnManageProductClicked"
+                        />
+
+                
+                <Button Text="Add Category"
+                        TextColor="White"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="OnAddCategoryClicked"
+                         />
+
+               
+                <Button Text="Manage Categories"
+                        TextColor="White"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="OnManageCategoryClicked"
+                        />
+
+
+                <Button Text="Add User"
+                        TextColor="White"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="FillAndExpand"
+                         Clicked="OnAddUserClicked"
+                        />
+
+
+                <Button Text="Manage Users"
+                        TextColor="White"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="OnManageUserClicked"
+                         />
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+   
+    <FlyoutPage.Detail>
+        <ContentPage Title="Home">
+            <ContentPage.ToolbarItems>
+                <ToolbarItem IconImageSource="https://cdn-icons-png.flaticon.com/512/4421/4421772.png" 
+                     Text="Logout" 
+                     Order="Primary" 
+                     Priority="1"
+                     Clicked="OnLogoutClicked"
+                     />
+                <ToolbarItem IconImageSource="https://cdn-icons-png.flaticon.com/512/5632/5632430.png" 
+                     Text="All" 
+                     Order="Primary" 
+                     Priority="0"
+                     Clicked="LoadCategories2"
+                      />
+
+            </ContentPage.ToolbarItems>
+            <StackLayout Padding="10">
+                <Label Text="Explore our products!"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   TextColor="#333" />
+
+                <ListView x:Name="CategoriesListView" ItemsSource="{Binding Categories}" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                              
+                                <Frame Padding="5"
+                                       CornerRadius="10"
+                                       HasShadow="True"
+                                       BackgroundColor="#f8f8f8">
+                                    <StackLayout>
+                                        
+                                        <Label Text="{Binding Name}" 
+                                               FontSize="24" 
+                                               FontAttributes="Bold" 
+                                               TextColor="#333" 
+                                               Padding="10,0" />
+
+                           
+                                        <ListView x:Name="ProductsListView" 
+                                                  ItemsSource="{Binding Products}" 
+                                                  HasUnevenRows="True" 
+                                                  SeparatorVisibility="None" 
+                                                  >
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <ViewCell>
+                                                        <StackLayout Orientation="Horizontal" 
+                                                                     Padding="10" 
+                                                                     BackgroundColor="White" 
+                                                                     Spacing="10">
+                                                            
+                                                            <Image Source="{Binding Photo}" 
+                                                                   WidthRequest="60" 
+                                                                   HeightRequest="60" 
+                                                                   Aspect="AspectFill" />
+
+                                                            <StackLayout>
+                                                               
+                                                                <Label Text="{Binding Designation}" 
+                                                                       FontSize="18" 
+                                                                       FontAttributes="Bold" 
+                                                                       TextColor="#333" />
+                                                                <Label Text="{Binding Price, StringFormat='{0} TND'}" 
+                                                                       FontSize="14" 
+                                                                       TextColor="#666" />
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </ViewCell>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projet.products.ListProductsPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10" Spacing="20">
+            <Label Text="Products" FontSize="24" HorizontalOptions="Center" />
+
+
+            <ListView x:Name="productsListView" ItemSelected="OnProductSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="1" Spacing="20" HorizontalOptions="StartAndExpand">
+                               
+                                <Label Text="{Binding Designation}" VerticalOptions="Center" />
+
+
+                                <Button Text="Edit" Clicked="OnEditButtonClicked" VerticalOptions="Center" CommandParameter="{Binding Id}" BackgroundColor="green"  HorizontalOptions="End"
+                                        WidthRequest="80"
+                                        HeightRequest="40"/>
+
+                                <Button Text="Delete" Clicked="OnDeleteButtonClicked" VerticalOptions="Center" CommandParameter="{Binding Id}" BackgroundColor="red"  HorizontalOptions="End"
+                                        WidthRequest="80"
+                                        HeightRequest="40" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

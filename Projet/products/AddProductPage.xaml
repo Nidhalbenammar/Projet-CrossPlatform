@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projet.products.AddProductPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10" Spacing="20">
+            <Image Source="https://cdn-icons-png.flaticon.com/512/1311/1311423.png"
+                   HeightRequest="120"
+                   WidthRequest="120"
+                   HorizontalOptions="Center" />
+            <Label Text="Add Product" FontSize="24" HorizontalOptions="Center" />
+
+         
+            <Entry x:Name="designationEntry" Placeholder="Enter product designation" />
+
+         
+            <Entry x:Name="photoEntry" Placeholder="Enter product photo" />
+
+         
+            <Entry x:Name="priceEntry" Placeholder="Enter product price" Keyboard="Numeric" />
+
+          
+            <Picker x:Name="categoryPicker" Title="Select Category" ItemDisplayBinding="{Binding Name}" />
+
+          
+            <Button Text="Add Product" Clicked="OnAddProductClicked" BackgroundColor="Green" TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

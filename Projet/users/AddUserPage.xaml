@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projet.users.AddUserPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10" Spacing="20">
+            <Image Source="https://cdn-icons-png.flaticon.com/512/3237/3237472.png"
+                   HeightRequest="120"
+                   WidthRequest="120"
+                   HorizontalOptions="Center" />
+            <Label Text="Add User" FontSize="24" HorizontalOptions="Center" />
+
+            <Entry x:Name="NomEntry" Placeholder="Nom" />
+            <Entry x:Name="PrenomEntry" Placeholder="Prenom" />
+            <Entry x:Name="UsernameEntry" Placeholder="Username" />
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
+
+           
+          
+
+            <Button Text="Add User" Clicked="OnAddUserClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

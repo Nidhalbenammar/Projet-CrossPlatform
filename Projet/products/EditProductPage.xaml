@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projet.products.EditProductPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10" Spacing="20">
+            <Label Text="Edit Product" FontSize="24" HorizontalOptions="Center" />
+
+            
+            <Entry x:Name="designationEntry" Placeholder="Enter product designation" />
+
+
+            <Entry x:Name="photoEntry" Placeholder="Enter product photo" />
+
+          
+            <Entry x:Name="priceEntry" Placeholder="Enter product price" Keyboard="Numeric" />
+
+            
+            <Picker x:Name="categoryPicker" Title="Select Category" ItemDisplayBinding="{Binding Name}" />
+
+            
+            <Button Text="Update Product" Clicked="OnUpdateButtonClicked" BackgroundColor="Blue" TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

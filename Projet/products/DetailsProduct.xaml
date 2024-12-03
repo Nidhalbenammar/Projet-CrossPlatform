@@ -1,0 +1,31 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="XamrinDocs.DetailsProduct"
+             BackgroundColor="White"
+             Title="Product Details">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+           
+            <Image Source="{Binding Product.Photo}" HeightRequest="250" Aspect="AspectFill" />
+
+           
+            <Label Text="{Binding Product.Designation}" FontSize="24" FontAttributes="Bold" TextColor="#333" />
+
+           
+            <Label Text="{Binding Product.Price, StringFormat='{0} TND'}" FontSize="18" TextColor="#666" />
+
+            <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Center">
+                <Button Text="-" Clicked="OnMoins" WidthRequest="40" HeightRequest="40" />
+                <Label Text="{Binding Quantity}" FontSize="18" VerticalOptions="CenterAndExpand" />
+                <Button Text="+" Clicked="OnPlus" WidthRequest="40" HeightRequest="40" />
+            </StackLayout>
+
+            <Button Text="Add to Cart"
+                    BackgroundColor="#007BFF"
+                    TextColor="White"
+                    Clicked="OnAddToCartClicked" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
